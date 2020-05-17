@@ -9,6 +9,8 @@ import torch
 import torch.optim as optim
 import torch.utils.data
 
+
+
 from model import LSTMClassifier
 
 def model_fn(model_dir):
@@ -76,7 +78,6 @@ def train(model, train_loader, epochs, optimizer, loss_fn, device):
             batch_X = batch_X.to(device)
             batch_y = batch_y.to(device)
             
-            # TODO: Complete this train method to train the model provided.
             optimizer.zero_grad()
             
             out = model.forward(batch_X)
